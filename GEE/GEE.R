@@ -4,7 +4,7 @@ library(corrplot)
 
 
 ## --------------------------------------------------------------------------------------------
-## create subcounty id:  1-10 digit of GEOID
+## create census tract id:  1-11 digit of GEOID
 data_merge$tract_id<-str_sub(data_merge$geoid,1,11)
 
 ## value below detection limit (replace with 5/sqrt(2))
