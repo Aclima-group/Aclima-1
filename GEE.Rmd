@@ -69,7 +69,7 @@ data_gee2<-na.omit(subset(data_merge,
 ```
 
 
-# 2 GEE with random effect on county subdivision level
+# 2 GEE with random effect on census tract level
 ```{r}
 
 ## Choose categorical income variable (with less missing value)
@@ -83,7 +83,7 @@ model_full<- geeglm(log_no2~
                     corstr="ind")
 
 ```
-# 2.2 GEE with random effect on county subdivision level (separate model for each SES variable)
+# 2.2 GEE with random effect on census tract level (separate model for each SES variable)
 ```{r}
 model_edu<-geeglm(log_no2~
                           race_aa_per+race_asian_per+race_hisp_per+race_other_per+
